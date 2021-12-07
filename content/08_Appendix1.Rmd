@@ -1,0 +1,88 @@
+\large\textbf{Tabellen und R-Outputs}
+
+\normalsize
+
+Um eine Überschrift zu erzeugen, die überhaupt nicht im Table of Contents auftaucht, muss man etwas tricksen. Ein Heading 2 (##) ist dabei äquivalent zu "large" und "bold" Text. Das ist besonders nützlich für Zwischenüberschriften im Appendix oder dem Preface.
+
+Das einfügen von Tabellen funktioniert genau wie in LaTeX:
+
+\begin{table}[!h]
+  \centering 
+  \begin{tabular}{@{\extracolsep{5pt}} cccc} 
+    \textbf{Sample} & \textbf{Characteristic} & \textbf{F-Statistic} & \textbf{p-value} \\  
+    \hline
+    Full & Income & 0.5509 & 0.8812 \\
+    Full & Age & 0.8576 & 0.5906 \\
+    Full & Gender & 0.9001 & 0.5466 \\
+    Full & Car & 1.216 & 0.2673 \\
+    With children & Income & 0.5986 & 0.8391 \\
+    With children & Age & 0.629 & 0.8133 \\
+    With children & Gender & 1.182 & 0.3056 \\
+    With children & Car & 0.675 & 0.7719 \\
+  \end{tabular}
+  \slcaption{Beispieltabelle im Appendix. Nur der erste Satz erscheint im Verzeichnis.}
+\end{table}
+
+\textbf{Output aus R als Text inkludieren}
+
+Es ist genauso möglich, einen R-Output einfach als Codefeld in die endgültige PDF mit aufzunehmen. Dazu kann man einfach ein Codeblock im .Rmd File erstellen ohne eine Sprache zu definieren.
+
+```{}
+------------------------------------------------------------
+Conditional AMCE's (age = 25%):
+------------------------------------------------------------
+ Attribute           Level Estimate Std. Err   z value   Pr(>|z|)    
+   r_tempo              50 -5.18891   2.8334 -1.831309 6.7055e-02    
+   r_infra            lane  0.88252   4.3529  0.202743 8.3934e-01    
+   r_infra           track  0.33096   4.6325  0.071442 9.4305e-01    
+   r_infra    bicycle_road  0.11415   4.6342  0.024633 9.8035e-01    
+   r_infra bicycle_freeway  1.97382   4.7555  0.415061 6.7810e-01    
+ r_parking        bikerack 17.00844   3.7321  4.557351 5.1803e-06 ***
+ r_parking       safespace 19.01209   3.5775  5.314331 1.0705e-07 ***
+    r_cost               1  4.37916   3.5491  1.233862 2.1725e-01    
+    r_cost               2  4.55197   3.7908  1.200792 2.2983e-01    
+    r_cost               4  1.81172   3.5623  0.508589 6.1104e-01    
+   r_stops             1-2 -8.32255   3.8453 -2.164325 3.0439e-02   *
+   r_stops             3-4 -5.37302   2.6652 -2.016019 4.3798e-02   *
+
+------------------------------------------------------------
+Conditional AMCE's (age = 50%):
+------------------------------------------------------------
+ Attribute           Level Estimate Std. Err  z value   Pr(>|z|)    
+   r_tempo              50 -3.92835   2.2790 -1.72371 8.4761e-02    
+   r_infra            lane  0.55689   3.5684  0.15606 8.7599e-01    
+   r_infra           track  1.45126   3.4728  0.41790 6.7602e-01    
+   r_infra    bicycle_road  0.95480   3.5443  0.26939 7.8763e-01    
+   r_infra bicycle_freeway  3.40278   3.6943  0.92108 3.5701e-01    
+ r_parking        bikerack 15.07272   2.9362  5.13345 2.8447e-07 ***
+ r_parking       safespace 16.74605   2.8771  5.82038 5.8713e-09 ***
+    r_cost               1  3.22406   2.8426  1.13420 2.5671e-01    
+    r_cost               2  3.78126   2.9739  1.27148 2.0356e-01    
+    r_cost               4  3.89405   2.7703  1.40566 1.5982e-01    
+   r_stops             1-2 -5.25151   3.0040 -1.74816 8.0436e-02    
+   r_stops             3-4 -4.33386   2.1591 -2.00728 4.4720e-02   *
+
+------------------------------------------------------------
+Conditional AMCE's (age = 75%):
+------------------------------------------------------------
+ Attribute           Level Estimate Std. Err   z value   Pr(>|z|)    
+   r_tempo              50 -0.77696   2.3371 -0.332455 0.73954594    
+   r_infra            lane -0.25720   4.0838 -0.062982 0.94978085    
+   r_infra           track  4.25201   2.5242  1.684501 0.09208482    
+   r_infra    bicycle_road  3.05640   2.7948  1.093594 0.27413319    
+   r_infra bicycle_freeway  6.97519   3.2288  2.160286 0.03075051   *
+ r_parking        bikerack 10.23342   3.3654  3.040814 0.00235939  **
+ r_parking       safespace 11.08094   3.4845  3.180022 0.00147264  **
+    r_cost               1  0.33630   3.3379  0.100752 0.91974735    
+    r_cost               2  1.85447   2.9248  0.634059 0.52604205    
+    r_cost               4  9.09986   2.7467  3.313076 0.00092276 ***
+   r_stops             1-2  2.42608   2.4668  0.983494 0.32536413    
+   r_stops             3-4 -1.73598   2.3461 -0.739954 0.45932762    
+---
+Number of Obs. = 807
+Number of Respondents = 135
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05
+
+```
+

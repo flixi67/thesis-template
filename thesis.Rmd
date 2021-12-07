@@ -1,0 +1,130 @@
+---
+title: |
+    **Wasting time on making a BA look beautiful: \
+     A RMarkDown Thesis Template**
+header-includes:
+    - \usepackage{setspace}
+    - \doublespacing
+classoption:
+    - a4paper
+bibliography: references.bib
+csl: style/apa-style.csl
+link-citations: true
+output:
+    pdf_document:
+        fig_caption: yes
+        keep_tex: false
+        number_sections: true
+        toc: false
+        toc_depth: 2
+        includes:
+            in_header: style/preamble.tex
+            before_body: style/title.sty
+---
+
+\newpage
+
+```{r echo = FALSE, results = FALSE}
+print_analysis = TRUE # TRUE or FALSE
+print_analysis_results = 'show' # hide or show
+```
+
+
+<!-- Different page numbering for content/formal stuff at the beginning -->
+\newpage
+\pagenumbering{roman}
+\newpage
+
+
+<!-- Table of contents. Every one of these could be removed -->
+
+\newpage
+<!-- Add table of contents -->
+\tableofcontents
+
+\newpage
+<!-- Add table of contents for figures -->
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+
+\newpage
+<!-- Add table of contents for tables -->
+\listoftables
+\addcontentsline{toc}{section}{List of Tables}
+
+<!-- start normal page numbering -->
+\newpage
+\pagenumbering{arabic}
+\hypersetup{linkcolor = black}
+
+<!-- I used newpage for major headings/sections -->
+\newpage
+
+# Preface {-}
+
+```{r child = 'content/01_preface.Rmd'}
+```
+
+\newpage
+
+# Introduction
+
+```{r child = 'content/02_introduction.Rmd'}
+```
+
+\newpage
+
+# Theory
+
+```{r child = 'content/03_theory.Rmd'}
+```
+
+\newpage
+
+# Methodology
+
+```{r child = 'content/04_methodology.Rmd'}
+```
+
+\newpage
+
+# Results
+
+```{r child = 'content/05_results.Rmd'}
+```
+
+\newpage
+
+# Discussion
+
+```{r child = 'content/06_discussion.Rmd'}
+```
+
+\newpage
+
+# References {-}
+
+<!-- Custom formatting I liked for the references. Basically indents every line except the first a bit. This way, if you look through the references, it is easier to read the author's names. -->
+\begingroup
+\setlength{\parindent}{-0.4in}
+\setlength{\leftskip}{0.4in}
+\setlength{\parskip}{8pt}
+\noindent
+
+<div id="refs"></div>
+\endgroup
+
+\newpage
+
+# Appendix A\label{app1} {-} 
+
+```{r child = 'content/08_Appendix1.Rmd'}
+```
+
+\newpage
+
+# Appendix B\label{app2} {-}
+
+```{r child = 'content/09_Appendix2.Rmd'}
+```
+

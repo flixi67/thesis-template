@@ -1,0 +1,15 @@
+Im Ergebnisteil ist wohl ein Beispiel zu R-Code direkt im Projekt angesagt.
+
+Dazu schreibt man den Code in einen Codeblock. Man kann auch andere R-Skripte "sourcen".
+
+```{r analysebeispiel}
+
+source("scripts/beispiel.R")
+
+print("But you can also just type something in here and it will do your thing")
+
+x <- sqrt(18)
+
+```
+
+Was angezeigt wird kann über die Einstellung `print_analysis` und `print_analysis_results` in thesis.Rmd gesteuert werden.

@@ -1,0 +1,15 @@
+\large\textbf{PDF-ception: Inkludieren einer PDF}
+
+\normalsize
+
+Zwei Appendixe sind schon echt viel, aber wenn man halt etwas, was schon als PDF vorliegt inkludieren muss...
+
+Dann geht das so!
+
+Da die Darstellung hierbei etwas tricky sein kann, muss man viel probieren.
+
+
+\includegraphics[width=1\textwidth, trim= 2in 5in 2in 0in, page= 1]{content/images/Fragebogen8.pdf}
+
+\includegraphics[width=1\textwidth, trim= 2in 5in 2in 0in, page= 2]{content/images/Fragebogen8.pdf}
+

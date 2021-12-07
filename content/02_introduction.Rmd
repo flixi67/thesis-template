@@ -1,0 +1,16 @@
+Schön, dass es Alternativen zum Formatieren von Text in Microsoft Word gibt.  Während für viele Studierenden die Integration von Literaturverwaltungssoftware wie beispielsweise Citavi in Microsoft Word bereits vieles erleichter, reißen sich andere dabei die Haare aus.
+
+@caulfield2012 hat zwar nicht die Lösung des Problems, aber ich benutze diesen Text als Beispiel für eine Zitation im Fließtext. Man benutzt den im BibTex-Eintrag angegeben sogenannten \textit{key}, um einen Verweis auf die Literatur zu geben. Dazu fügt man den `key` einfach hinter ein `@`-Zeichen an.
+
+Möchte man die In-Text Zitation in Klammer haben, setzt man eckige Klammern darum [@caulfield2012]. Man kann auch mehrere Verweise so angeben, indem man sie durch Strichpunkt trennt [@caulfield2012; @wooliscroft2014]. Die Syntax ist schlau und ordnet es automatisch in der alphabetisch richtigen Reihenfolge.
+
+Ergänzungen vor oder nach dem Eintrag können einfach mit in die eckige Klammer geschrieben werden, beispielsweise `[siehe auch @manz2015, S. 69]`. Der vorherige Eintrag für zu dem hier [siehe auch @manz2015, S. 69].
+
+Wichtig beim Ergänzen der eigenen Zitation als BibTex-Einträge in `references.bib` ist, dass Sonderzeichen und Umlaute nicht funktionieren:
+  
+- ü wird dargestellt durch `{\"u}`
+- Ö wird dargestellt durch `{\"O}`
+- é wird dargestellt durch `{\'e}`
+  - und so weiter
+
+Im .Rmd ist das alles egal. Hier kann man fröhlich Ümläute benützen, sogar ßcharfe ßonderzeichen.
