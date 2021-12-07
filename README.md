@@ -1,9 +1,8 @@
 # Thesis Template
 
-Credits to this go to 
+Credits to this go mostly to [Flori F](https://github.com/FloriF/thesis-template). His version was adapted to fit the requirements of a B.A. or M.A. thesis at the Department for Political Science and Administration @ Uni Konstanz.
 
-This is a template for a thesis or a large report, based on `.Rmd`-files.
-
+In general, this template can be used for any thesis or  large report, based on `.Rmd`-files and with some technical knowledge highly adaptable.
 
 ## Basic Usage
 
@@ -15,7 +14,8 @@ This is a template for a thesis or a large report, based on `.Rmd`-files.
 5. To create the final output, knit `thesis.Rmd`.
 
 ### Citing
-1. To cite a source, you add the `BibTex` entry to 
+1. To cite a source, you add the `BibTex` entry to the `references.bib` file
+2. The citing syntax is straightforward. Use @key or [@key, p. 1] for in-text citations, the reference list will be created automatically accordingly.
 
 ## Notes
 
