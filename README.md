@@ -17,9 +17,10 @@ In general, this template can be used for any thesis or  large report, based on 
 1. To cite a source, you add the `BibTex` entry to the `references.bib` file
 2. The citing syntax is straightforward. Use @key or [@key, p. 1] for in-text citations, the reference list will be created automatically accordingly.
 
-## Notes
+### Styling the title page
+Styling of the title page happens in `style/title.sty`. 
 
-This is not yet a full documentation of this template, this is rather just the rough and dirty skeleton of my thesis. However, if you ever worked with LaTeX, you can adapt everything. You could also set keep_latex: true, so you can manually adjust everything that does not look right.
+## Notes
 
 Since knitting/using RMarkDown requires you to have a LaTeX-Distribution installed, I recommend MikTex. It allows you to install every package you may need (and that you do not yet have installed) to be downloaded and installed automatically, and it can even ask you to decide on each package on its own.
 
@@ -27,7 +28,5 @@ You might want to add/remove some `\newpage` commands at the beginning to correc
 
 You can edit anything. You can add/remove sections, title pages, etc. 
 
-Styling of the title page happens in style/title.sty (I wanted a very beautiful title page, so I had to do this in Tex and not in Markdown. You can of course decide to use a markdown title page.)
-
 Should be able to be knitted via the 'Knit' button in RStudio or using 
-`rmarkdown::render('thesis.Rmd', output_format = 'pdf_document', encoding = 'UTF-8')`. **Please try this before you start using this template!** At some point I will add a script or something similar to do this for you. I set up Sublime Text 3 (the text editor I use) to recompile the whole stuff by pressing 'CTRL + B' while editing the thesis.Rmd file.
+`rmarkdown::render('thesis.Rmd', output_format = 'pdf_document', encoding = 'UTF-8')`. **Please try this before you start using this template!**
