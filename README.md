@@ -16,6 +16,7 @@ In general, this template can be used for any thesis or  large report, based on 
 ### Citing
 1. To cite a source, you add the `BibTex` entry to the `references.bib` file
 2. The citing syntax is straightforward. Use @key or [@key, p. 1] for in-text citations, the reference list will be created automatically accordingly.
+3. The citing style is APA in general. You can get consistent and good looking citations mostly by using the `BibTex` types `article`, `book` and `report`.
 
 ### Styling the title page
 Styling of the title page happens in `style/title.sty`. 
