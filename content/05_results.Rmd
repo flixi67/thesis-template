@@ -8,7 +8,11 @@ source("scripts/beispiel.R")
 
 print("But you can also just type something in here and it will do your thing")
 
-x <- sqrt(18)
+
+data <- read.csv("data/exampledata.csv")
+
+
+hist(data$weight)
 
 ```
 

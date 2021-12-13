@@ -2,6 +2,17 @@ Um eine Grafik einzufügen, legt man diese im Ordner `content\images` ab und ink
 
 Der erste Satz in der Zeile der Caption wird im Table of Figures angegeben. Über das Label kann man mit `\ref{}` auf die Abbildung \ref{planned_behaviour} verweisen. Das funktioniert auch von jeder anderen Stelle aus, beispielsweise einem anderen Kapitel. Oder an eine andere Überschrift, indem man `\label{}` dahinter setzt. Guck mal was bei der Überschrift \ref{test} steht.
 
+```{}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.8\textwidth]{content/images/planned_behaviour.jpg}
+  \slcaption{Theory of planned behaviour. Own illustration.}
+  \label{planned_behaviour}
+\end{figure}
+
+```
+
 \begin{figure}[h!]
   \centering
   \includegraphics[width=0.8\textwidth]{content/images/planned_behaviour.jpg}

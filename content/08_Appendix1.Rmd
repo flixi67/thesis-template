@@ -6,6 +6,28 @@ Um eine Überschrift zu erzeugen, die überhaupt nicht im Table of Contents auft
 
 Das einfügen von Tabellen funktioniert genau wie in LaTeX:
 
+```{}
+
+\begin{table}[!h]
+  \centering 
+  \begin{tabular}{@{\extracolsep{5pt}} cccc} 
+    \textbf{Sample} & \textbf{Characteristic} & \textbf{F-Statistic} & \textbf{p-value} \\  
+    \hline
+    Full & Income & 0.5509 & 0.8812 \\
+    Full & Age & 0.8576 & 0.5906 \\
+    Full & Gender & 0.9001 & 0.5466 \\
+    Full & Car & 1.216 & 0.2673 \\
+    With children & Income & 0.5986 & 0.8391 \\
+    With children & Age & 0.629 & 0.8133 \\
+    With children & Gender & 1.182 & 0.3056 \\
+    With children & Car & 0.675 & 0.7719 \\
+  \end{tabular}
+  \slcaption{Beispieltabelle im Appendix. Nur der erste Satz erscheint im Verzeichnis.}
+\end{table}
+
+```
+
+
 \begin{table}[!h]
   \centering 
   \begin{tabular}{@{\extracolsep{5pt}} cccc} 
